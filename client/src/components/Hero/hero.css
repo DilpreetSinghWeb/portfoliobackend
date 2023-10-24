@@ -1,0 +1,90 @@
+
+.hero{ 
+    padding: 40px 10% 200px;
+    overflow: hidden;
+    position: relative;
+    background:rgb(22, 22, 22);
+}
+.hero_container{
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+    height:520px;
+}
+.hero_container h2{
+    letter-spacing:2px;
+    font-size: 2.3rem;
+    white-space: nowrap;
+    color: rgb(255 255 255 /96%);
+}
+.hero_container h3{
+    
+    /* font-size: 1.2rem; */
+    margin:2.4rem 0 1.5rem;
+    line-height: 1.5rem;
+    color:  #c0c0c0;
+}
+.hero_container p{
+    letter-spacing: 1px;
+    font-size: clamp(.85rem,3vw,.9rem);
+    line-height: 1.5rem;
+    max-width: 500px;
+    color: #dddddd;
+}
+@keyframes morph{
+    0%,100%{
+        border-radius: 
+        40% 60% 70% 30% /
+        40% 40% 60% 50%;
+    }
+    34%{
+        border-radius:
+        70% 30% 50% 50% /
+        30% 30% 70% 70%; 
+    }
+    67%{
+        border-radius:
+        100% 60% 60% 100% /
+        100% 100% 60% 60%; 
+    }
+}
+.hero img{
+    box-shadow:
+     -10px -10px 3px rgb(255 255 255 /15%),
+     10px 10px 3px rgb(255 255 255 /15%)
+     ;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    animation: morph 3.5s linear infinite;
+}
+.hero{
+    position: relative;
+}
+.hero_wave_img{
+    position: absolute;
+    bottom:0px;
+    left: 0;
+}
+
+@media screen and (max-width:900px){
+    .hero{
+        padding: 60px 5% 140px;
+    }
+    .hero_container{
+       text-align: center;
+       flex-direction: column-reverse;
+       justify-content: center;
+    }
+    .hero_container h2{
+        font-size: 1.7rem;
+    }
+    .hero img{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/*  192.168.197.162 */
