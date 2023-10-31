@@ -6,7 +6,7 @@ var cors = require('cors');
 require('dotenv').config();
 
 const mongoURI = process.env.MONGO_URI;
-const port = process.env.PORT || 5000;
+const port = process.env.PORT ;
 
 
 const app = express();
@@ -22,6 +22,7 @@ app.post('/', async (req, res) => {
 
     const { username, email, message } = req.body;
     try {
+        alert("Submitting your response wait!!!");
         const userDoc = await User.create({ username, email, message });
         res.json({ msg: "Successfully submitted" });
     }
