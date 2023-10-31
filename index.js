@@ -22,7 +22,6 @@ app.post('/', async (req, res) => {
 
     const { username, email, message } = req.body;
     try {
-        alert("Submitting your response wait!!!");
         const userDoc = await User.create({ username, email, message });
         res.json({ msg: "Successfully submitted" });
     }
